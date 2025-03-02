@@ -1,0 +1,41 @@
+.slick-dots {
+    position: absolute !important; /* Position dots relative to the slider */
+    bottom: 5%; /* Distance from the bottom edge */
+    left: 4vw; /* Align to the left side */
+    display: flex !important; /* Ensure proper display of dots *
+    justify-content: center; /* Center dots vertically within their container */
+    align-items: flex-start; /* Align dots to the left */
+    z-index: 10; /* Make sure dots appear above the slide content */
+    padding: 0; /* Remove any extra padding */
+}
+  
+.slick-dots li {
+    margin: 0 !important; /* Reset default margin */
+    padding-left: 30px !important; /* Increase space between dots manually */
+    padding: 0;
+    list-style: none; /* Remove list-style bullets */
+}
+  
+.slick-dots li:last-child {
+    margin-bottom: 0; /* Remove margin for the last dot */
+}
+  
+.slick-dots li button:before {
+    font-size: 16px; /* Dot size */
+    color: white; /* Default dot color */
+    opacity: 0.7; /* Inactive dot transparency */
+    transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+  
+.slick-dots li.slick-active button:before {
+    color: #ffff; /* Active dot color */
+    opacity: 1; /* Fully visible active dot */
+}
+@media (max-width: 768px) {
+    .slick-dots {
+        left: 80%; /* Center dots horizontally */
+        transform: translateX(-50%); /* Adjust for perfect centering */
+        align-items: center; /* Center dots vertically in the container */
+        bottom: 5%; /* Adjust the bottom position for mobile if needed */
+    }
+}

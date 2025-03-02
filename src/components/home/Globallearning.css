@@ -1,0 +1,53 @@
+/* Custom styles for slick dots */
+.custom-dotted {
+    position: absolute;
+    bottom: 2vw;
+    left: 2vw; /* Align dots to the left on desktop */
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+  
+  .custom-dotted li {
+    margin: 0 10px; /* Space between dots */
+  }
+  
+  .custom-dotted button {
+    width: 15px !important; /* Default dot size */
+    height: 15px !important; /* Default dot size */
+    border-radius: 50%; /* Circular dots */
+    background-color: transparent; /* Retain default color */
+  } 
+  .custom-dotted li button:before {
+    font-size: 16px; /* Dot size */
+    color: white; /* Default dot color */
+    opacity: 0.4; /* Inactive dot transparency */
+    transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+} 
+   
+  /* .custom-dotted .slick-active button {
+    background-color: white;  
+    opacity: 1;
+  }  */
+  .custom-dotted  li.slick-active button:before {
+    color: #ffff; /* Active dot color */
+    opacity: 1; /* Fully visible active dot */
+}
+  
+  @media (max-width: 768px) {
+    .custom-dotted {
+      left: 80%; /* Center-align dots for mobile */
+      bottom: -12vw; /* Keep dots at the bottom */
+      transform: translateX(-50%);
+    } 
+    .custom-dotted li button:before {
+        font-size: 16px; /* Dot size */
+        color: gray; /* Default dot color */
+        opacity: 0.3; /* Inactive dot transparency */
+        transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+    }   
+    .custom-dotted li.slick-active button:before {
+        color:black; /* Active dot color */
+        opacity: 1; /* Fully visible active dot */
+    }
+  }
+  

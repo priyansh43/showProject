@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+.slider-container {
+    overflow: visible !important; 
+  } 
+  .div-bg {
+    background: linear-gradient(to bottom, #1C1C1C00 0%, #1C1C1C 100%);
+  }
+
+  .writing-mode-vertical-flipped {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  
+  .scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}  
+
+img {
+  will-change: transform, opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.relative {
+  -webkit-overflow-scrolling: touch;
+}
+
+.belowsliderhidden::-webkit-scrollbar {
+  display: none; 
+}  
+.custom-padding {
+  padding-top: 0vw; /* Default padding for screen widths less than 600px */
+}
+
+@media (min-width: 450px) and (max-width: 780px) {
+  .custom-padding {
+    padding-top: 50vw; /* Padding for screen widths between 600px and 780px */
+  }
+}
+@media (min-width: 300px) and (max-width: 450px) {
+  .custom-padding {
+    padding-top: 28vw; /* Padding for screen widths between 600px and 780px */
+  }
+}
